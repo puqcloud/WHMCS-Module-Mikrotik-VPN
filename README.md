@@ -17,13 +17,14 @@ Module Functions:
 - Use only Mikrotik API
 - Possibility to set Bandwidth speed limits
 - Possibility to set Bandwidth traffic limits
-- Ability to buy additional traffic
 - Traffic usage statistics
 - Auto-Limiting the use of the service when the traffic limit is exhausted.
 - Module supports multilingualism **(Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish,  Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian)**
 - Link to instructions for setting up the service in the client area.
 - User email notification traffic limit
 - Suspend exceeding traffic limit email notification
+- In the WHMCS settings, a list of IPs is specified for use by clients.
+- Ability to use both private and public IPs for clients
 
 Available options in the admin panel:
 
@@ -35,19 +36,16 @@ Available options in the admin panel:
 - Change Package
 - VPN connection status
 - Reset Connection
-- Traffic added history
 
 Available options in the client panel:
 
 - Change the VPN password
 - VPN connection status
-- Traffic balance
 - Traffic statistics
-- Traffic added history
 
 - - - - - -
 
->WHMCS minimal version: 8 +
+>WHMCS minimal version: 9 +
 
 >Mikrotik minimal version: 7 +
 
