@@ -51,8 +51,6 @@ Available options in the client panel:
 
 >The settings of the whmcs module when it comes to upload and download speeds register the opposite values in the mikrotik router (e.g. download speed in whmcs 1mb = upload speed in mikrotirk 1mb). This is due to the fact that from the point of view of Mikrotik, the traffic is incoming, and from the point of view of the VPN client, this is outgoing traffic.
 
-[![image-1659960355259.png](https://doc.puq.info/uploads/images/gallery/2022-08/scaled-1680-/image-1659960355259.png)](https://doc.puq.info/uploads/images/gallery/2022-08/image-1659960355259.png)
+<img width="565" height="909" alt="image" src="https://github.com/user-attachments/assets/d79144c8-dd1c-479a-a73e-1b2548934118" />
 
-[![image-1659960384599.png](https://doc.puq.info/uploads/images/gallery/2022-08/scaled-1680-/image-1659960384599.png)](https://doc.puq.info/uploads/images/gallery/2022-08/image-1659960384599.png)
-
-[![image-1659960403402.png](https://doc.puq.info/uploads/images/gallery/2022-08/scaled-1680-/image-1659960403402.png)](https://doc.puq.info/uploads/images/gallery/2022-08/image-1659960403402.png)
+<img width="1135" height="691" alt="image" src="https://github.com/user-attachments/assets/1dfdfe76-023f-4192-8b31-e90ff895f449" />
