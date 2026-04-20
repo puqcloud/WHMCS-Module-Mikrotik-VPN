@@ -1,56 +1,68 @@
-# WHMCS-Module-Mikrotik-VPN
-The module is intended as an opportunity for IT companies to expand their offer for customers by offering paid VPN accounts. After installation, the module will fully manage the creation, edition, and suspension of VPN accounts and interact with the WHMCS billing system, exchanging data needed for settlements with customers, activations or service blocking.
-
-Initial assumptions: the company uses WHMCS and owns or is able to install Mikrotik routers. Mikrotik routers are necessary to provide VPN service (managing Mikrotik secrets users). WHMCS is necessary to manage the VPN service.
 # Description
 
-## Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)** 
+### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
+#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
 
-#####  [Order now](https://puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+## Mikrotik VPN WHMCS module
 
-### The module, fully installed and correctly implemented in the system, offers the following functionalities.
+The Mikrotik VPN WHMCS module is a provisioning module that integrates WHMCS with Mikrotik routers, enabling Internet and VPN service providers to offer VPN accounts to their customers. The module automates the full lifecycle of VPN account management using the Mikrotik API only.
 
-Module Functions:
+---
 
-- Auto create and deploy VPN account/accounts
-- Suspend/Unsuspend/Terminate/Change Package/Change Password/Reset connection
-- Use only Mikrotik API
-- Possibility to set Bandwidth speed limits
-- Possibility to set Bandwidth traffic limits
-- Traffic usage statistics
-- Auto-Limiting the use of the service when the traffic limit is exhausted.
-- Module supports multilingualism **(Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish,  Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian)**
-- Link to instructions for setting up the service in the client area.
-- User email notification traffic limit
-- Suspend exceeding traffic limit email notification
-- In the WHMCS settings, a list of IPs is specified for use by clients.
-- Ability to use both private and public IPs for clients
+## Main features
 
-Available options in the admin panel:
+- **Automatic account provisioning** — auto create and deploy client VPN accounts on the Mikrotik router upon order activation
+- **Account lifecycle management** — create, suspend, unsuspend, terminate, change package, change password and reset connection for VPN accounts
+- **Bandwidth control** — configurable download / upload speed limits (M/s) enforced by the Mikrotik PPP profile
+- **Traffic limits & post-paid billing** — configurable traffic quotas per billing cycle (One Time, Monthly, Quarterly, Semi-Annual, Annual, Biennial, Triennial) with post-paid traffic billing via standard WHMCS metrics
+- **Traffic usage statistics** — daily incoming / outgoing traffic history with configurable retention period
+- **Auto-suspension on traffic exhaustion** — the VPN account is automatically disabled on the Mikrotik router when the traffic balance reaches zero
+- **Email notifications** — automatic notifications when remaining traffic falls below a configurable threshold and when the account is suspended due to traffic exhaustion
+- **Multi-language support** — 25+ languages including Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
+- **Client area integration** — customers can view the VPN server address, available protocols, credentials with copy-to-clipboard, connection status, bandwidth limit and traffic statistics
+- **Admin area tools** — administrators can view license status, Mikrotik API connection status, product information and manage VPN accounts via standard WHMCS module buttons
+- **IP address pool** — the module distributes IP addresses from the list specified in the WHMCS server settings; both private and public IPs are supported
+- **Configurable protocol support** — independent toggles for PPtP and L2TP protocols, L2TP IPSec PSK key displayed in the client area
+- **Instruction link** — optional URL to the VPN setup manual displayed as a button in the client area
+- **License verification** — built-in license system with online / offline verification and admin alerts
 
-- Create users
-- Suspend users
-- Terminate users
-- Unsuspend users
-- Change password
-- Change Package
-- VPN connection status
-- Reset Connection
+---
 
-Available options in the client panel:
+## System requirements
 
-- Change the VPN password
-- VPN connection status
-- Traffic statistics
+| Requirement | Minimum |
+|-------------|---------|
+| WHMCS | 9.x or higher |
+| PHP | 8.2 or higher |
+| Mikrotik RouterOS | 7.x or higher |
+| ionCube Loader | v13 or newer (v14, v15) |
 
-- - - - - -
+> **Important:** The module registers opposite values for upload and download speeds in the Mikrotik router compared to WHMCS settings, because Mikrotik measures incoming traffic while VPN clients experience outgoing traffic. Proper Mikrotik router configuration is essential (NAT, firewall, routing, and all required VPN server settings).
 
->WHMCS minimal version: 9 +
+---
 
->Mikrotik minimal version: 7 +
+## Links
 
->The settings of the whmcs module when it comes to upload and download speeds register the opposite values in the mikrotik router (e.g. download speed in whmcs 1mb = upload speed in mikrotirk 1mb). This is due to the fact that from the point of view of Mikrotik, the traffic is incoming, and from the point of view of the VPN client, this is outgoing traffic.
+- **Product page:** [https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn)
+- **Documentation:** [https://doc.puq.info/books/mikrotik-vpn-whmcs-module](https://doc.puq.info/books/mikrotik-vpn-whmcs-module)
+- **Support:** [https://puqcloud.com/submitticket.php](https://puqcloud.com/submitticket.php?step=2&deptid=1)
+- **Community:** [https://community.puqcloud.com/](https://community.puqcloud.com/)
 
-<img width="565" height="909" alt="image" src="https://github.com/user-attachments/assets/d79144c8-dd1c-479a-a73e-1b2548934118" />
+---
 
-<img width="1135" height="691" alt="image" src="https://github.com/user-attachments/assets/1dfdfe76-023f-4192-8b31-e90ff895f449" />
+## Screenshots
+
+### Client area — Home screen
+
+![Client area home screen](img/01-description-client-area.png)
+*01-description-client-area.png*
+
+### Client area — Traffic statistics
+
+![Traffic statistics](img/02-description-traffic-stats.png)
+*02-description-traffic-stats.png*
+
+### Admin area — Product information
+
+![Admin area product information](img/03-description-admin-area.png)
+*03-description-admin-area.png*
