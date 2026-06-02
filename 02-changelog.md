@@ -5,11 +5,12 @@
 
 ---
 
-## v3.1.1 (01-06-2026)
+## v3.1.1 (02-06-2026)
 
 - **Full support for the latest RouterOS 7.21.4.** The module has been verified end-to-end against the newest Mikrotik firmware, so you can confidently run your VPN services on up-to-date, secure routers.
 - **Rock-solid router communication.** Connections to your Mikrotik devices are now even more reliable — requests that could previously stall on certain firmware versions complete instantly, keeping provisioning and management fast and dependable.
 - **Stay current with peace of mind.** Whether you are deploying brand-new routers or upgrading existing ones to the latest RouterOS, your VPN automation keeps working smoothly out of the box.
+- **PHP 7.4 support is back.** The module runs flawlessly on PHP 7.4 once again, so customers on established hosting stacks can keep their proven setup without rushing a server upgrade. We will continue to support PHP 7.4 for as long as it remains technically possible.
 
 ---
 
