@@ -5,6 +5,14 @@
 
 ---
 
+## v3.1.1 (01-06-2026)
+
+- **Full support for the latest RouterOS 7.21.4.** The module has been verified end-to-end against the newest Mikrotik firmware, so you can confidently run your VPN services on up-to-date, secure routers.
+- **Rock-solid router communication.** Connections to your Mikrotik devices are now even more reliable — requests that could previously stall on certain firmware versions complete instantly, keeping provisioning and management fast and dependable.
+- **Stay current with peace of mind.** Whether you are deploying brand-new routers or upgrading existing ones to the latest RouterOS, your VPN automation keeps working smoothly out of the box.
+
+---
+
 ## v3.1 (20-04-2026)
 
 - **Improved stability across the WHMCS admin area.** Rare page-loading errors that could appear on some admin screens (for example when opening a support ticket on installations with non-standard file layouts, symlinks or custom hosting paths) have been eliminated. The admin panel now loads smoothly in every environment.
