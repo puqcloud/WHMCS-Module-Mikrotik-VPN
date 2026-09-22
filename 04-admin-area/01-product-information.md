@@ -1,7 +1,7 @@
 # Product Information
 
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
 
 ## Admin area product information
 
@@ -28,12 +28,23 @@ Shows the result of a real-time connection test to the Mikrotik router API-SSL, 
 | **IP address** | The IP address assigned to the account from the server's IP pool |
 | **Comment** | Includes the configured Comment PREFIX and WHMCS service identifier |
 
-### Traffic information
+### Connection information
 
-- **Bandwidth limits** — configured download / upload speed limits
-- **Traffic balance** — current remaining traffic balance for the customer
-- **Traffic that will be added** on the next billing cycle
-- **Connection status** — shows whether the client is currently online
+- **Comment** — includes the configured comment prefix and WHMCS service identifier
+- **Service** — active VPN protocol (e.g. `pptp`, `l2tp`)
+- **Name** — VPN user account name
+- **Caller-id** — caller identification / remote IP address
+- **Address** — client IP address assigned by the router
+- **Uptime** — current active session duration
+*(Displays "NOT ONLINE" when the client is disconnected)*
+
+### Metric Statistics
+
+When Metric Billing is enabled, the admin view displays live metric statistics:
+- **Bandwidth Usage Download (GB)** — current cumulative downloaded traffic (GB) and enabled status
+- **Bandwidth Usage Upload (GB)** — current cumulative uploaded traffic (GB) and enabled status
+- **Last Update** — relative time when the metric was last refreshed
+- **Refresh Now** button — allows immediate on-demand metric recalculation
 
 ### Available management actions
 
@@ -44,11 +55,11 @@ The standard WHMCS module command buttons are available:
 - **Terminate** — permanently delete the VPN account from the router
 - **Change Password** — reset the account's password
 - **Change Package** — update profile, service, bandwidth limits and traffic configuration (used during upgrades/downgrades)
-- **Reset Connection** — force-disconnect the current VPN session (useful when the customer needs to re-establish the tunnel)
+- **Reset VPN Interface** — force-disconnect the current active VPN session (useful when the customer needs to re-establish the tunnel)
 
 ---
 
 ## Screenshot
 
-![Admin area product information](../img/15-product-information.png)
-*15-product-information.png*
+![Admin area product information](../img/admin-product-info.png)
+*admin-product-info.png*

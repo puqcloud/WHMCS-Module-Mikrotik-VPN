@@ -1,7 +1,7 @@
 # Setup guide: Mikrotik preparation and configuration
 
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
 
 This guide covers the preparation of a Mikrotik router for use with the PUQ Mikrotik VPN WHMCS module: root CA certificate, Webfig certificate, HTTPS, API-SSL and VPN server activation.
 
@@ -85,8 +85,8 @@ set api-ssl certificate=Webfig disabled=no
 
 Enable the VPN protocol(s) you plan to offer to clients (PPTP, L2TP, etc.) and configure the corresponding PPP profile, service and IP pool. The PPP profile name configured here will later be selected in the product settings on the WHMCS side.
 
-![Mikrotik VPN server setup](../img/16-mikrotik-setup.png)
-*16-mikrotik-setup.png*
+![Mikrotik VPN server setup](../img/mikrotik-vpn-setup.png)
+*mikrotik-vpn-setup.png*
 
 ---
 

@@ -1,7 +1,7 @@
 # Add server (Mikrotik router)
 
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
 
 ## Adding a Mikrotik router to WHMCS
 
@@ -20,8 +20,8 @@ Enter the correct **Name** and **Hostname** for your Mikrotik router.
 
 If your Mikrotik API-SSL service listens on a non-standard port, enter it in the **Port** field. Check the **Secure** checkbox (the module talks to the router through API-SSL).
 
-![Add server - general settings](../img/04-add-server-1.png)
-*04-add-server-1.png*
+![Add server - general settings](../img/add-server-general.png)
+*add-server-general.png*
 
 ---
 
@@ -41,7 +41,7 @@ In the **Assigned IP Addresses** field, enter the list of IP addresses that will
 
 The test connection verifies that the module can reach the Mikrotik API-SSL service and authenticate with the provided credentials.
 
-![Add server - module settings](../img/05-add-server-2.png)
-*05-add-server-2.png*
+![Add server - module settings](../img/add-server-module-settings.png)
+*add-server-module-settings.png*
 
 > **Important:** The Mikrotik user must have sufficient privileges to create and manage PPP secrets, read traffic counters and reset them. The module uses the Mikrotik API only — SSH access is not used.

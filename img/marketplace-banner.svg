@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0082c9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a4e4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bg)"/>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="500" height="8" fill="url(#accent)"/>
+
+  <!-- Enlarged VPN Shield & Tunnel icon group -->
+  <g transform="translate(160, 25) scale(1.65)">
+    <!-- Shield outline -->
+    <path d="M50 5 L90 20 L90 60 Q90 95 50 110 Q10 95 10 60 L10 20 Z"
+          fill="none" stroke="#00a4e4" stroke-width="2.5"/>
+    <!-- Shield inner fill -->
+    <path d="M50 12 L83 25 L83 58 Q83 88 50 102 Q17 88 17 58 L17 25 Z"
+          fill="#00a4e4" opacity="0.15"/>
+    <!-- Lock icon inside shield -->
+    <rect x="38" y="52" width="24" height="20" rx="2" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M42 52 L42 44 C42 38 47 34 50 34 C53 34 58 38 58 44 L58 52"
+          fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="50" cy="62" r="2.5" fill="#7dd3fc"/>
+    <!-- Tunnel arrows -->
+    <g transform="translate(24, 82)">
+      <path d="M0,0 L8,-4 L8,-1 L22,-1 L22,1 L8,1 L8,4 Z" fill="#0082c9" opacity="0.8"/>
+      <path d="M52,0 L44,-4 L44,-1 L30,-1 L30,1 L44,1 L44,4 Z" fill="#0082c9" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Module Name (Big & Readable, Edge-to-Edge) -->
+  <text x="250" y="270" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">MIKROTIK</text>
+  <text x="250" y="335" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">VPN</text>
+
+  <!-- Subtitle -->
+  <text x="250" y="380" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#94a3b8" text-anchor="middle" letter-spacing="2">WHMCS SERVER MODULE</text>
+
+  <!-- Separator -->
+  <rect x="150" y="405" width="200" height="4" fill="#0082c9" rx="2"/>
+
+  <!-- PUQ Software Branding -->
+  <g transform="translate(150, 435)">
+    <text x="0" y="28" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0082c9">PUQ</text>
+    <text x="92" y="28" font-family="Arial, sans-serif" font-size="22" fill="#94a3b8">Software</text>
+  </g>
+</svg>

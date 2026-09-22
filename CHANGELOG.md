@@ -1,7 +1,20 @@
 # Changelog
 
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
+
+## v4.0.0 — 2026-09-22
+
+- **Atomic traffic statistics collection.** Replaced read-modify-write logic with atomic SQL increments (`Capsule::raw`) in `StatisticsSaveTraffic()`, eliminating race conditions and traffic data loss during concurrent WHMCS cron jobs and metric queries.
+- **WHMCS Usage Billing MetricProvider fix.** Resolved zero-traffic reporting so that `Usage(0.0)` is reliably returned when usage is 0 GB, preventing "No usage data" statuses in WHMCS.
+- **Unified interface reset action.** Removed redundant `resetConnection` action and button, standardizing on a single, clean **`Reset VPN Interface`** button across admin and client interfaces.
+- **Admin API connection timeout.** Enforced a strict 15-second timeout on router status checks with offline circuit breaker, eliminating admin panel hangs on unreachable Mikrotik routers.
+- **Guzzle HTTP Client integration.** Migrated all external API and license verification requests from legacy cURL to `\GuzzleHttp\Client` with exponential backoff and retry mechanism.
+- **ionCube 15 & PHP 8.2+ architectural upgrade.** Transitioned `hooks.php` to an unencoded lightweight bootstrap delegating logic to `lib/puqMikrotikVPNHooks.php` for seamless ionCube 15 compatibility.
+- **Automated usage cleanup on termination.** Local usage statistics in `puqMikrotikVPN_statistics` are now automatically purged when a service is terminated.
+- **Enhanced Client Area UI.** Integrated standard PUQ client area UI toolkit with `header.tpl`, dynamic copy-to-clipboard buttons, toast notifications, CSRF protection, and streamlined responsive layout.
+- **Legacy configuration fallback.** Added transparent backward compatibility for products migrating from older configuration slots (`configoption2..11`).
+- **Comprehensive localization.** Standardized translation strings across all 26 supported languages with safe typographic apostrophes and full Ukrainian language support.
 
 ---
 

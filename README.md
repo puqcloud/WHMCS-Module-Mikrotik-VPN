@@ -1,7 +1,7 @@
 # Description
 
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
-#####  [Order now](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [FAQ](https://faq.puqcloud.com/)
+#####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
 
 ## Mikrotik VPN WHMCS module
 
@@ -12,18 +12,16 @@ The Mikrotik VPN WHMCS module is a provisioning module that integrates WHMCS wit
 ## Main features
 
 - **Automatic account provisioning** — auto create and deploy client VPN accounts on the Mikrotik router upon order activation
-- **Account lifecycle management** — create, suspend, unsuspend, terminate, change package, change password and reset connection for VPN accounts
+- **Account lifecycle management** — create, suspend, unsuspend, terminate, change package, change password, and reset VPN interface
 - **Bandwidth control** — configurable download / upload speed limits (M/s) enforced by the Mikrotik PPP profile
-- **Traffic limits & post-paid billing** — configurable traffic quotas per billing cycle (One Time, Monthly, Quarterly, Semi-Annual, Annual, Biennial, Triennial) with post-paid traffic billing via standard WHMCS metrics
-- **Traffic usage statistics** — daily incoming / outgoing traffic history with configurable retention period
-- **Auto-suspension on traffic exhaustion** — the VPN account is automatically disabled on the Mikrotik router when the traffic balance reaches zero
-- **Email notifications** — automatic notifications when remaining traffic falls below a configurable threshold and when the account is suspended due to traffic exhaustion
-- **Multi-language support** — 25+ languages including Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
+- **Metric billing** — post-paid usage-based billing for incoming and outgoing traffic (GB) via standard WHMCS MetricProvider
+- **Atomic traffic statistics** — daily and monthly traffic charts with Google Charts, with atomic database increments preventing race condition losses
+- **Multi-language support** — 26 languages including Arabic, Azerbaijani, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Farsi, French, German, Hebrew, Hungarian, Italian, Macedonian, Norwegian, Polish, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian
 - **Client area integration** — customers can view the VPN server address, available protocols, credentials with copy-to-clipboard, connection status, bandwidth limit and traffic statistics
-- **Admin area tools** — administrators can view license status, Mikrotik API connection status, product information and manage VPN accounts via standard WHMCS module buttons
+- **Admin area tools** — administrators can view license status, Mikrotik API connection status (with 15s timeout protection), product information and manage VPN accounts via standard WHMCS module buttons
 - **IP address pool** — the module distributes IP addresses from the list specified in the WHMCS server settings; both private and public IPs are supported
-- **Configurable protocol support** — independent toggles for PPtP and L2TP protocols, L2TP IPSec PSK key displayed in the client area
-- **Instruction link** — optional URL to the VPN setup manual displayed as a button in the client area
+- **Configurable protocol support** — independent toggles for PPtP, L2TP (with IPSec PSK), OpenVPN, and SSTP protocols with custom instruction HTML per protocol
+- **Instruction and client links** — optional URLs to VPN setup manuals and client downloads displayed as action buttons in the client area
 - **License verification** — built-in license system with online / offline verification and admin alerts
 
 ---
@@ -32,10 +30,10 @@ The Mikrotik VPN WHMCS module is a provisioning module that integrates WHMCS wit
 
 | Requirement | Minimum |
 |-------------|---------|
-| WHMCS | 9.x or higher |
-| PHP | 8.2 or higher |
-| Mikrotik RouterOS | 7.x or higher |
-| ionCube Loader | v13 or newer (v14, v15) |
+| **WHMCS** | 8.x+, 9.x+ |
+| **PHP** | 7.4, 8.1, 8.2, 8.3, 8.4 |
+| **Mikrotik RouterOS** | 7.x or higher |
+| **ionCube Loader** | v15+ |
 
 > **Important:** The module registers opposite values for upload and download speeds in the Mikrotik router compared to WHMCS settings, because Mikrotik measures incoming traffic while VPN clients experience outgoing traffic. Proper Mikrotik router configuration is essential (NAT, firewall, routing, and all required VPN server settings).
 
@@ -43,7 +41,7 @@ The Mikrotik VPN WHMCS module is a provisioning module that integrates WHMCS wit
 
 ## Links
 
-- **Product page:** [https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn](https://panel.puqcloud.com/index.php?rp=/store/whmcs-module-mikrotik-vpn)
+- **Product page:** [https://puqcloud.com/whmcs-module-mikrotik-vpn.php](https://puqcloud.com/whmcs-module-mikrotik-vpn.php)
 - **Documentation:** [https://doc.puq.info/books/mikrotik-vpn-whmcs-module](https://doc.puq.info/books/mikrotik-vpn-whmcs-module)
 - **Support:** [https://puqcloud.com/submitticket.php](https://puqcloud.com/submitticket.php?step=2&deptid=1)
 - **Community:** [https://community.puqcloud.com/](https://community.puqcloud.com/)
@@ -54,15 +52,20 @@ The Mikrotik VPN WHMCS module is a provisioning module that integrates WHMCS wit
 
 ### Client area — Home screen
 
-![Client area home screen](img/01-description-client-area.png)
-*01-description-client-area.png*
+![Client area home screen](img/client-area-home.png)
+*client-area-home.png*
 
 ### Client area — Traffic statistics
 
-![Traffic statistics](img/02-description-traffic-stats.png)
-*02-description-traffic-stats.png*
+![Traffic statistics](img/client-area-traffic.png)
+*client-area-traffic.png*
+
+### Client area — Usage metrics
+
+![Usage metrics](img/client-area-metrics.png)
+*client-area-metrics.png*
 
 ### Admin area — Product information
 
-![Admin area product information](img/03-description-admin-area.png)
-*03-description-admin-area.png*
+![Admin area product information](img/admin-product-info.png)
+*admin-product-info.png*
