@@ -3,6 +3,16 @@
 ### Mikrotik VPN module **[WHMCS](https://puqcloud.com/link.php?id=77)**
 #####  [Order now](https://puqcloud.com/whmcs-module-mikrotik-vpn.php) | [Download](https://download.puqcloud.com/WHMCS/servers/PUQ_WHMCS-Mikrotik-VPN/) | [Community](https://community.puqcloud.com/)
 
+## v4.1.0 — 2026-09-30
+
+- **Resilient Daily Cron & Usage Synchronization.** Usage updates and traffic metric collection during WHMCS automation runs are now completely isolated per account with comprehensive diagnostic logging. A temporary connection hiccup or offline router will never interrupt the billing run for your other customers.
+- **Strict PHP 8.2+ Compatibility & Type Hardening.** Resolved typed property assignment issues across package speed and bandwidth configurations, ensuring seamless and crash-free execution on modern PHP 8.1, 8.2, and 8.3 environments.
+- **Zero-Touch Configuration Auto-Migration.** Existing products configured on previous versions automatically upgrade their parameters into the modern unified settings format directly in the database upon editing, eliminating manual reconfiguration.
+- **Enhanced WHMCS 9 Admin Experience.** Refined dynamic module settings detection for Select2 interfaces, providing instant and responsive controls in the WHMCS 9 administrator panel.
+- **Clean Module Logging.** Excluded local database license verification checks (`License_Verification (db)`) from the WHMCS Module Log, recording exclusively online verification calls to keep diagnostic logs clean.
+
+---
+
 ## v4.0.0 — 2026-09-22
 
 - **Atomic traffic statistics collection.** Replaced read-modify-write logic with atomic SQL increments (`Capsule::raw`) in `StatisticsSaveTraffic()`, eliminating race conditions and traffic data loss during concurrent WHMCS cron jobs and metric queries.
